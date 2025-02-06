@@ -1,0 +1,35 @@
+Exeecise for swapping variables using pointers: 
+
+Q: Why do we use poitners instead of actual normal variables? 
+A: Because when you do that, you copy the values and in the main will not show the difference. This is "Passing by value" 
+   When using pointers, it takes the memory address instead of a copy and this is called "Passing by reference", doing this it will replace the values in the memory, and the 
+   values will be swapped correctly since we take the address, not the copy which is destroyed when exiting the function. 
+
+Code: 
+#include <stdio.h>
+void swap(int *a, int *b);
+
+int main()
+{
+
+    // Swap 2 numbers using pointers
+    int n1, n2;
+
+    printf("Input the numbers: ");
+    scanf("%d %d", &n1, &n2);
+
+    printf("Before swapping: n1 = %d, n2 = %d\n", n1, n2);
+    swap(&n1, &n2);
+    printf("Afetr swapping: n1 = %d, n2 = %d\n", n1, n2);
+
+    return 0;
+}
+
+void swap(int *a, int *b)
+{
+    int temp;
+
+    temp = *a;
+    *a = *b;
+    *b = temp;
+}
