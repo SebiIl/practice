@@ -2,7 +2,7 @@
 #define HEADER_H
 
 //DEFINES area 
-#define MAX_ARRSIZE 10
+#define MAX_ARRSIZE 100
 
 //Types are 
 typedef unsigned char uint8;
@@ -13,7 +13,7 @@ typedef unsigned int uint32;
 typedef signed int sint32;
 
 //Function prototypes are
-void printArray(uint32 arr[], uint32 size);
+void printArray(sint32 arr[], uint16 size);
 
 
 #endif // HEADER_H
